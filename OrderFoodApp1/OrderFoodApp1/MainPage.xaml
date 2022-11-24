@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:OrderFoodApp1 ="clr-namespace:OrderFoodApp1"
+             x:Class="OrderFoodApp1.MainPage">
+
+    <ContentPage.Content>
+        <!--<ScrollView  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">-->
+        <StackLayout>
+            <AbsoluteLayout HeightRequest="50" HorizontalOptions="FillAndExpand" Margin="20,0,20,0">
+                <Label AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Text="Let's Start" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Style="{StaticResource LabelTitleStyle}"/>
+                <Image Source= "Food.png" AbsoluteLayout.LayoutBounds="1,0.5,25,25" AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
+            </AbsoluteLayout>
+            <StackLayout Margin="20,0,20,0">
+                <Label Text="Hi Foodies!" Style="{StaticResource LabelWelcomeStyle}"></Label>
+                <Label Text="What Are You Looking For?" Style="{StaticResource LabelWelcomeStyle}"></Label>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Frame IsClippedToBounds="False" Margin="20,10,20,0" CornerRadius="30" HasShadow="True" HeightRequest="50" Padding="0">
+
+
+                    <OrderFoodApp1:CustomEntry Placeholder="Search for restaurant, item or more.." HeightRequest="50"  EntryCornerRadius="25" WidthRequest="500" Margin="20,0,20,0"></OrderFoodApp1:CustomEntry>
+                </Frame>
+
+
+            </StackLayout>
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0" HeightRequest="20" WidthRequest="20" CornerRadius="15" BackgroundColor="{StaticResource MainColor}">
+                    <StackLayout>
+                        <StackLayout>
+
+                            <Label Text="Fast Delivery" TextColor="{StaticResource BgColor}" FontSize="15"></Label>
+
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Column="1"  HeightRequest="20" WidthRequest="20" CornerRadius="15" BackgroundColor="{StaticResource MainColor}">
+                    <StackLayout>
+                        <Label Text="Great Offers" TextColor="{StaticResource BgColor}" FontSize="15"/>
+                    </StackLayout>
+
+                </Frame>
+                <Frame Grid.Column="2" HeightRequest="20" WidthRequest="20" CornerRadius="15" BackgroundColor="{StaticResource MainColor}">
+                    <StackLayout>
+                        <Label Text="Cuisines" TextColor="{StaticResource BgColor}" FontSize="15"/>
+                    </StackLayout>
+
+                </Frame>
+            </Grid>
+
+
+            <Label Text="Most Popular" TextColor="{StaticResource TextColor}" FontFamily="{StaticResource Avo Bold}" FontSize="20" Margin="20,0,20,0"></Label>
+            <ScrollView Orientation="Horizontal">
+                <StackLayout  Orientation="Horizontal">
+                    <Frame CornerRadius="5" WidthRequest="250" HasShadow="true" Padding="0" IsClippedToBounds="True">
+                        <StackLayout Orientation="Vertical" Margin="10">
+                            <Frame Padding="0" HasShadow="false" IsClippedToBounds="true" CornerRadius="10">
+                                <Image Source="Briyani.jpg"></Image>
+                            </Frame>
+                            <Label Text="Chicken Briyani" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource TextColor}"></Label>
+                            <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                <Image Source="location.jpg" WidthRequest="25" HorizontalOptions="Start" Grid.Column="0"/>
+                                <Label Text="20Km" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor }" FontSize="15"/>
+                                <Image Grid.Column="1"  Source="clock.png"  WidthRequest="20"  HorizontalOptions="Center"></Image>
+                                <Label Text="20-30min" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor}" FontSize="15"/>
+
+
+                            </StackLayout>
+                       </StackLayout>
+                     </Frame>
+
+                    <Frame CornerRadius="5" WidthRequest="250" IsClippedToBounds="true" HasShadow="true" Padding="0">
+                        <StackLayout Orientation="Vertical" Margin="10">
+                            <Frame Padding="0" HasShadow="false" IsClippedToBounds="true" CornerRadius="10">
+                                <Image Source="Dosa.jpg"> </Image>
+                                
+                            </Frame>
+                            <Label Text="Dosa" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource TextColor}"></Label>
+                            <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                <Image Source="location.jpg" WidthRequest="25" HorizontalOptions="Start" Grid.Column="0"/>
+                                <Label Text="20Km" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor }" FontSize="15"/>
+                                <Image Grid.Column="1"  Source="clock.png"  WidthRequest="20"  HorizontalOptions="Center"></Image>
+                                <Label Text="20-30min" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor}" FontSize="15"/>
+
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="5" WidthRequest="250" IsClippedToBounds="true" HasShadow="true" Padding="0">
+                        <StackLayout Orientation="Vertical" Margin="10">
+                            <Frame Padding="0" HasShadow="false" IsClippedToBounds="true" CornerRadius="10">
+                                <Image Source="Pasta.jpg"></Image>
+
+                            </Frame>
+                            <Label Text="Veg Pasta" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource TextColor}"></Label>
+                            <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                <Image Source="location.jpg" WidthRequest="25" HorizontalOptions="Start" Grid.Column="0"/>
+                                <Label Text="20Km" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor }" FontSize="15"/>
+                                <Image Grid.Column="1"  Source="clock.png"  WidthRequest="20"  HorizontalOptions="Center"></Image>
+                                <Label Text="20-30min" Style="{StaticResource LabelTitleStyle}" TextColor="{StaticResource MainColor}" FontSize="15"/>
+
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </StackLayout>
+
+                
+
+
+
+
+
+
+
+
+
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
+    
